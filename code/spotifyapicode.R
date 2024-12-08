@@ -1,1 +1,12 @@
-#hello
+install.packages("dplyr") 
+install.packages("tidyr")
+install.packages("ggplot2") 
+install.packages("spotifyr") 
+install.packages("stats") 
+install.packages("shiny") 
+library(dplyr) 
+library(tidyr)
+library(ggplot2) 
+library(spotifyr)
+library(stats)
+library(shiny)
