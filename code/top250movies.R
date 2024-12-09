@@ -1,91 +1,47 @@
 install.packages("dplyr") 
 install.packages("tidyr")
 install.packages("ggplot2") 
-#install.packages("spotifyr") 
 install.packages("stats") 
-install.packages("shiny") 
-install.packages("syuzhet")
-install.packages("lubridate") 
 install.packages("knitr") 
 library(dplyr) 
 library(tidyr)
 library(ggplot2) 
-#library(spotifyr)
 library(stats)
-library(shiny) 
-library(syuzhet) 
-library(lubridate)
 library(knitr) 
-
 library(readr)
+
 IMDB_Top_250_Movies <- read_csv("~/Downloads/IMDB Top 250 Movies.csv")
+View(IMDB_Top_250_Movies)
 
-IM
+from78_00 <- IMDB_Top_250_Movies |> filter(year >= 1978 & year <= 2000)
 
+from00_22 <- IMDB_Top_250_Movies |> filter(year >= 2000 & year <= 2022)
 
+from78_00_avg <- mean(from78_00$rating, na.rm = TRUE) 
+from00_22_avg <- mean(from00_22$rating, na.rm = TRUE)
 
+t_test_result <- t.test(from78_00$rating, from00_22$rating) 
+print(t_test_result)
 
+#data:  from78_00$rating and from00_22$rating
+#t = 1.604, df = 149.74, p-value = 0.1108
+#alternative hypothesis: true difference in means is not equal to 0
+#95 percent confidence interval:
+  #-0.01324771  0.12751053
+#sample estimates:
+  #mean of x mean of y 
+#8.343590  8.286458 
 
-
-
-
-#Sys.setenv(SPOTIFY_CLIENT_ID = "d7bf5087238d4244ab5f6091a1070ae1") 
-#Sys.setenv(SPOTIFY_CLIENT_SECRET = "a1e8f0ea71274b28b204683433c28c05") 
-#Sys.setenv(SPOTIFY_REDIRECT_URI = "http://localhost:1410/") 
-#access_token <- get_spotify_access_token()
-#access_token <- get_spotify_authorization_code(scope = c("playlist-read-private", "user-library-read"))
-
-
-#get_my_top_artists_or_tracks(type = 'artists', 
-                            # time_range = 'long_term', 
-                             #limit = 5) %>% 
-  #select(.data$name, .data$genres) %>% 
-  #rowwise %>% 
-  #mutate(genres = paste(.data$genres, collapse = ', ')) %>% 
-  #ungroup %>% 
-
-
-
-
-
-
-
-# Fetch audio features for valid tracks
-#valid_ids <- tracks$id[!is.na(tracks$id)]
-#audio_features <- get_track_audio_features(valid_ids)
-#print(audio_features)
-
-
-#playlist_tracks <- get_playlist_tracks("ggmochii") 
-
-#test_playlist <- "7vT5Pf7VTyeWOojyh0N2hL" # Spotify's "Today's Top Hits"
-#tracks <- get_playlist_tracks(test_playlist)
-#print(tracks)
-
-#my_playlists <- get_user_playlists("ggmochii") 
-
-#discover_weekly <- my_playlists[my_playlists$name == "Discover Weekly", ]
-#tracks_discover_weekly <- get_playlist_tracks(discover_weekly$id) 
-#tracks_feature <- get_track_audio_features(tracks_discover_weekly$id)
-#head(tracks_feature)
-
-#playlist_id <- "7vT5Pf7VTyeWOojyh0N2hL"
-#playlist_tracks <- get_playlist_tracks(playlist_id) 
-
-#audio_features <- get_track_audio_features(playlist_tracks$id) 
-
-#audio_features_variance <- audio_features %>%
- # summarize(across(c(valence, energy, danceability, acousticness), var, na.rm = TRUE))
-#print(audio_features_variance) 
-
-
-
-#get_my_top_artists_or_tracks(type = 'artists', 
-                             #time_range = 'long_term', 
-                             #limit = 5) %>% 
-  #select(.data$name, .data$genres) %>% 
-  #rowwise %>% 
- # mutate(genres = paste(.data$genres, collapse = ', ')) %>% 
-  #ungroup %>% 
-  
-
+IMDB_Top_250_Movies$period <- ifelse(IMDB_Top_250_Movies$year >= 1978 & IMDB_Top_250_Movies$year <= 2000, "1978 - 2000", "2000 - 2022")
+ggplot(IMDB_Top_250_Movies, aes(x = period, y = rating, fill = period)) +
+       geom_boxplot() + 
+         labs(title = "Average Ratings From 1978-2022 and 2000-2022",
+              x = "Year",
+              y = "Ratings") + 
+         scale_color_manual(values = c("1978-2000" = "aquamarine4", "2000-2022" = "coral1")) 
+       theme_minimal()
+       
+       
+       
+       
+       
