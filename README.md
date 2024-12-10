@@ -32,5 +32,7 @@ Additional genre classification and historical context were derived from public 
 
 Figure 1: the average ratings from 1978-2000 and 2000-2022
 
+The boxplot compares average film ratings between 1978-2000 and 2000-2022. It reveals higher mean ratings and greater variation for 1978-2000. The plot also highlights one potential outlier in 1978-2000 and two in 2000-2022.
+
 ## Usage of our project 
 
