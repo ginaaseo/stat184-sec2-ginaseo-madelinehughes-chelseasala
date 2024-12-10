@@ -30,7 +30,7 @@ Additional genre classification and historical context were derived from public 
 
 ## Results summary 
 
-
+Figure 1: the average ratings from 1978-2000 and 2000-2022
 
 ## Usage of our project 
 
