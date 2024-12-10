@@ -37,6 +37,12 @@ The boxplot compares average film ratings between 1978-2000 and 2000-2022. It re
 Figure 2: Frequency of Film Genre Across 1978-2022 
 
 This line graph tracks genre popularity from 1978 to 2022, with each genre represented by a distinct color. It highlights trends in the top three genres and examines changes in their frequency over time.
+
+Figure 3: Frequency of Top 3 Genres 
+
+Figure 4: Average Movie Budgets from 1978-2000 and 2000-2022 
+
+Figure 5: Average Movie Budgets from 1978-2000 and 2000-2022 (Outliers Removed) 
  
 ## Usage of our project 
 
