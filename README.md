@@ -28,6 +28,8 @@ Additional genre classification and historical context were derived from public 
 
 ## features of analysis 
 
+
+
 ## Results summary 
 
 Figure 1: The Average Ratings from 1978-2000 and 2000-2022
@@ -43,6 +45,4 @@ Figure 3: Frequency of Top 3 Genres
 Figure 4: Average Movie Budgets from 1978-2000 and 2000-2022 
 
 Figure 5: Average Movie Budgets from 1978-2000 and 2000-2022 (Outliers Removed) 
- 
-## Usage of our project 
 
