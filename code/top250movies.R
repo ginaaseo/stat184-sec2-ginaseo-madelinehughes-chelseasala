@@ -42,5 +42,28 @@ ggplot(IMDB_Top_250_Movies, aes(x = period, y = rating, fill = period)) +
        theme_minimal()
        
        
-  #Hello     
-       
+genre78_22 <- IMDB_Top_250_Movies |> 
+  filter(year >= 1978 & year <= 2022) 
+
+genre_split <- genre78_22 |> 
+  separate_rows(genre, sep = ",") |> 
+  mutate(genre = trimws(genre)) 
+
+genre_count <- genre_split |> 
+  group_by(year, genre) |>
+  summarise(n = n(), .groups = "drop") 
+
+ggplot(genre_count, aes(x = year, y = n, color = genre)) + 
+  geom_line(linewidth = 1) + 
+  labs(title = "Frequency of Film Genre Across 1978 - 2022",
+       x = "Year",
+       y = "Frequency of Genres",
+       color = "Genres") + 
+  theme_minimal() + 
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold"),
+    plot.subtitle = element_text(hjust = 0.5)
+  )
+
+
+
