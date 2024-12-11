@@ -126,7 +126,7 @@ ggplot(remove_NA, aes(x = period, y = budget, fill = period)) +
 
 
 outlier_thresholds <- remove_NA %>%
-  group_by(period) %>%
+  group_by(period) %>% 
   summarise(
     lower_bound = quantile(budget, 0.25) - 1.5 * IQR(budget),
     upper_bound = quantile(budget, 0.75) + 1.5 * IQR(budget)
