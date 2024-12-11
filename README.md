@@ -24,7 +24,7 @@ Additional genre classification and historical context were derived from public 
 
 ## features of analysis 
 
-
+To explore whether films released between 1978 and 2000 have higher average IMDb ratings compared to those from 2000 to 2022, we will use the IMDb Top 250 Movies dataset obtained from Kaggle. This dataset includes films from 1921 to 2022 with details such as genre, rating, budget, box office revenue, and runtime. For a balanced comparison, we selected a 44-year time frame, spanning 1978 to 2022, to fairly represent films released before and after the 21st century. To ensure accurate analysis, we will tidy the data by filtering for relevant parameters, removing null values, and excluding unnecessary information to avoid complications during the investigation.
 
 ## Results summary 
 
