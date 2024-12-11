@@ -15,11 +15,7 @@ This study focuses on exploring how the evolution of film production and audienc
 Main data source: 
 The primary dataset was obtained from Kaggle and IMDB, which contains comprehesive information about films, including their ratings, genres, release years, and other metadata. 
 
-This dataset was accest through the Kaggle [] and supplemented by scraping additional information where neccesary. 
-
 The purposee of the database is to serve as a public repository for film-related data, primarily used by audiences and researchers to explore movie metadata and trends.
-
-Each case represents an individual film, uniquely identified by its title and release year, along with associated attributes such as average rating, genre, and budget (when available).
 
 Supplemental Data Sources:
 Data on film budgets and box office performance were sourced from Box Office Mojo and The Numbers to enhance the analysis by correlating financial performance with audience ratings.
@@ -36,13 +32,19 @@ Figure 1: The Average Ratings from 1978-2000 and 2000-2022
 
 The boxplot compares average film ratings between 1978-2000 and 2000-2022. It reveals higher mean ratings and greater variation for 1978-2000. The plot also highlights one potential outlier in 1978-2000 and two in 2000-2022.
 
-Figure 2: Frequency of Film Genre Across 1978-2022 
+Figure 2: T-test results 
+
+The test revealed a test statistic of 1.604 and a p-value of 0.1108, indicating no significant difference in average ratings between 1978-2000 (mean: 8.34) and 2000-2022 (mean: 8.29). The 95% confidence interval (-0.0132, 0.1275) includes 0, further supporting the decision to fail to reject the null hypothesis.
+
+Figure 3: Frequency of Film Genre Across 1978-2022 
 
 This line graph tracks genre popularity from 1978 to 2022, with each genre represented by a distinct color. It highlights trends in the top three genres and examines changes in their frequency over time.
 
-Figure 3: Frequency of Top 3 Genres 
+Figure 4: Frequency of Top 3 Genres 
 
-Figure 4: Average Movie Budgets from 1978-2000 and 2000-2022 
+The graph shows that action and adventure genres gained significant popularity after 2000, with action emerging just before the 2000s and adventure becoming more noticeable around 1985.
 
-Figure 5: Average Movie Budgets from 1978-2000 and 2000-2022 (Outliers Removed) 
+Figure 5: Average Movie Budgets from 1978-2000 and 2000-2022 
+
+Figure 6: Average Movie Budgets from 1978-2000 and 2000-2022 (Outliers Removed) 
 
