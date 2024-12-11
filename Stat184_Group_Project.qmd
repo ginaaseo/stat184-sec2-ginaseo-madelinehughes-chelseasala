@@ -1,7 +1,0 @@
----
-title: "Stat184_Project_Report"
-format: pdf
-editor: visual
----
-
-## Hello
