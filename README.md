@@ -46,5 +46,5 @@ The graph shows that action and adventure genres gained significant popularity a
 
 Figure 5: Average Movie Budgets from 1978-2000 and 2000-2022 
 
-Figure 6: Average Movie Budgets from 1978-2000 and 2000-2022 (Outliers Removed) 
+
 
