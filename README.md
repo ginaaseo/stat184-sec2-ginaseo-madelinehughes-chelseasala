@@ -46,5 +46,6 @@ The graph shows that action and adventure genres gained significant popularity a
 
 Figure 5: Average Movie Budgets from 1978-2000 and 2000-2022 
 
+The boxplot highlights that average movie budgets were significantly lower from 1978 to 2000 compared to 2000 to 2022, with much less variation in the earlier period. One outlier was removed to ensure accurate analysis. The lower budgets before 2000 may reflect limited technology, a smaller global film market, less marketing, lower ticket prices, and inflation.
 
 
